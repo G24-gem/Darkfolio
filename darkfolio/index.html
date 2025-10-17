@@ -1,248 +1,254 @@
-<!-- index.html (Clean & Fully Responsive PWA) -->
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darkfolio | Akinbo Gem</title>
-
-  <!-- Manifest and theme color for PWA -->
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#00ff99" />
-
-
-  <!-- Styles & Scripts -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/terminal.js"></script>
-  <script defer src="assets/js/ai-avatar.js"></script>
-  <script defer src="assets/js/3d-effects.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Gem Akinbo | MERN Stack Developer | Portfolio</title>
+    <meta name="title" content="Gem Akinbo | MERN Stack Developer | Portfolio">
+    <meta name="description" content="Full-stack developer specializing in React, Node.js, and real-time applications. Check out my projects including AnonChat X and Logic Wars.">
+    <meta name="keywords" content="MERN developer, full-stack developer, React developer, Node.js, portfolio, web developer">
+    <meta name="author" content="Gem Akinbo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://darkfolio-iota.vercel.app/">
+    <meta property="og:title" content="Gem Akinbo | MERN Stack Developer">
+    <meta property="og:description" content="Full-stack developer crafting innovative web applications">
+    <meta property="og:image" content="https://darkfolio-iota.vercel.app/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://darkfolio-iota.vercel.app/">
+    <meta property="twitter:title" content="Gem Akinbo | MERN Stack Developer">
+    <meta property="twitter:description" content="Full-stack developer crafting innovative web applications">
+    <meta property="twitter:image" content="https://darkfolio-iota.vercel.app/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
-  <nav class="nav-bar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#market">Black Market</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">&lt;Gem /&gt;</a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#github" class="nav-link">GitHub</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-  <div id="loader"><div class="glitch-cube"></div></div>
-  <div id="terminal-intro"></div>
-  
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="container hero-content">
+            <div class="glitch" data-text="👾 Gem Akinbo">👾 Gem Akinbo</div>
+            <h1>MERN Stack Developer</h1>
+            <p class="tagline">Crafting futuristic backend systems and innovative web experiences</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow"></div>
+        </div>
+    </header>
 
-  
-  <div id="main-content" class="hidden">
-  <!-- HOME -->
-  <section id="home">
-    <div class="hero-card">
-      <h1>👾 Gem Akinbo</h1>
-      <h2>MERN stack Developer</h2>
-      <p>Crafting futuristic backend systems and metaphysical tech. Welcome to my domain.</p>
-      <a href="#projects" class="cta-button">Explore Projects</a>
-    </div>
-    <div class="stats-bar">
-      <div class="stat">
-        <h3>15+</h3>
-        <p>Projects</p>
-      </div>
-      <div class="stat">
-        <h3>7+</h3>
-        <p>Custom APIs</p>
-      </div>
-      <div class="stat">
-        <h3>∞</h3>
-        <p>Ideas Brewing</p>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm Gem, a full-stack developer passionate about building robust, scalable web applications. With expertise in the MERN stack, I transform complex problems into elegant solutions.</p>
+                    <p>I specialize in real-time systems, RESTful APIs, and creating seamless user experiences. When I'm not coding, I'm exploring new technologies or contributing to open-source projects.</p>
+                    <p>My approach: Write clean code, solve real problems, and never stop learning.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h1>About Me</h1>
-    <p>
-      I'm Gem, a visionary with a sharp edge. I’ve spent less than a decade sharpening my coding blade.<br>
-      I *despise* mediocrity — I’m here to build, break norms, and bend logic to my will.<br>
-      I vibe with rebellious minds, bond over ideas, and transform dreams into real-world builds.<br><br>
-      My mantra? <i>Dream big, execute committedly.</i><br><br>
-      <q><i>Ideas are numerous but execution is rare.</i></q>
-    </p>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div id="projectsGrid" class="projects-grid">
+                <!-- Projects will be loaded dynamically -->
+                <div class="loading">Loading projects...</div>
+            </div>
+        </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h1>Projects</h1>
-    <p>Here lies the artifacts of mad code and innovation.</p>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>AnonChat X</h3>
-        <p>A real-time anonymous chat platform for teens. Vibrant, fast, and uncensored.</p>
-        <button onclick="window.open('#', '_blank')">Preview</button>
-      </div>
-      <div class="project-card">
-        <h3>Logic Wars</h3>
-        <p>Online multiplayer math battle arena. Test logic, speed, and ego.</p>
-        <button onclick="window.open('#', '_blank')">Preview</button>
-      </div>
-      <div class="project-card">
-        <h3>GemGPT</h3>
-        <p>An AI-powered chatbot that understands emotion and solves math in style.</p>
-        <button onclick="window.open('#', '_blank')">Preview</button>
-      </div>
-      <div class="project-card">
-        <h3>Hackfolio</h3>
-        <p>My hacker-themed portfolio — you're in it right now. Raw. Black. Brilliant.</p>
-        <button onclick="window.open('#', '_blank')">Preview</button>
-      </div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Mongoose</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Socket.io</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">JWT</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">PWA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <h1>Blog</h1>
-    <p>Thoughts, code logs, tech philosophies — all archived here.</p>
-    <ul class="blog-list">
-      <li><strong>🧠 Why Zero is Not a Number</strong> — My rebellious breakdown of math fundamentals.</li>
-      <li><strong>👁️‍🗨️ Beyond JavaScript</strong> — A deep dive into native-level web logic.</li>
-      <li><strong>⚡ Indie Dev Warfare</strong> — How to rise as a solo dev in a chaotic tech world.</li>
-    </ul>
-  </section>
+    <!-- GitHub Section -->
+    <section id="github" class="section">
+        <div class="container">
+            <h2 class="section-title">GitHub Activity</h2>
+            <div id="githubStats" class="github-stats">
+                <!-- GitHub stats will be loaded here -->
+            </div>
+            <div id="githubRepos" class="github-repos">
+                <!-- Repos will be loaded here -->
+            </div>
+        </div>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h1>Skills</h1>
-    <ul>
-      <li>⚡ JavaScript, TypeScript</li>
-      <li>🌐 React.js, Next.js, Express.js</li>
-      <li>🌿 MongoDB, Mongoose, Firebase</li>
-      <li>🧠 AI Concept Design & Prompt Engineering</li>
-      <li>🔐 REST APIs, JWT, OAuth2</li>
-      <li>📦 Git, GitHub, Vercel, Netlify</li>
-      <li>🧮 Mathematics, Logic Design, Pseudocode</li>
-      <li>🧪 Postman, Insomnia (API Testing)</li>
-      <li>📲 PWA & App Installation Support</li>
-    </ul>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Open for freelance projects, collaborations, or full-time opportunities.</p>
+                    <p class="response-time">Expected response time: 24-48 hours</p>
+                    
+                    <div class="social-links">
+                        <a href="mailto:your.email@example.com" class="social-link" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://github.com/yourusername" class="social-link" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com/yourhandle" class="social-link" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h1>Services</h1>
-    <p>I conjure clean, fast, and futuristic code.<br>
-    I specialize in:</p>
-    <ul>
-      <li>🔥 Custom backend systems with Express & Node.js</li>
-      <li>🤖 Chatbots & AI-powered tools (coded from scratch)</li>
-      <li>🕵️‍♂️ Ghost dev services (covert project builds)</li>
-      <li>📡 Real-time communication systems</li>
-    </ul>
-    <p>Want to hire me? Hit me up below.</p>
-  </section>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h1>Contact</h1>
-    <form>
-      <label>Name:</label><br>
-      <input type="text" name="name" placeholder="Your Name"><br>
-      <label>Email:</label><br>
-      <input type="email" name="email" placeholder="you@email.com"><br>
-      <label>Message:</label><br>
-      <textarea name="message" placeholder="Speak your mind..."></textarea><br>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- BLACK MARKET -->
-  <section id="market">
-    <h1>Black Market</h1>
-    <p>Coming soon: exclusive scripts, AI tools, and rogue utilities for devs who dare to be different.</p>
-    <ul>
-      <li>🕶️ <strong>Obsidian Fetcher</strong> — A stealthy data scraper for elite coders.</li>
-      <li>🧠 <strong>EmotiBot Base</strong> — AI logic layer with synthetic emotions.</li>
-      <li>⚔️ <strong>CodeSniper</strong> — Auto-debugger that analyzes and patches your code instantly.</li>
-    </ul>
-    <p>These tools will be available for preview, licensing, or private purchase. Stay alert.</p>
-  </section>
-
-  <div id="ai-avatar">
-    <!-- You can later add an animated floating AI avatar or bot face here -->
-  </div>
-
-  <div id="footer">
-    <footer>
-      <p>&copy; 2025 Akinbo Gem. All Rights Reserved.</p>
-      <button id="installBtn" style="display: none;">Install App</button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gem Akinbo. Built with vanilla JS.</p>
+            <p>Designed & Developed by Gem</p>
+        </div>
     </footer>
-  </div>
-</div>
 
-  <script>
-    let deferredPrompt;
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const installBtn = document.getElementById('installBtn');
-      installBtn.style.display = 'block';
-      installBtn.addEventListener('click', () => {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('App installed ✅');
-          }
-          deferredPrompt = null;
-        });
-      });
-    });
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker
-          .register('./service-worker.js')
-          .then((reg) => console.log('Service worker registered ✅'))
-          .catch((err) => console.error('Service worker failed ❌', err));
-      });
-    }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('light-mode');
-    }
-
-    window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute('id');
-
-    // Highlight active nav link
-    if (scrollY >= sectionTop - 150 && scrollY < sectionTop + sectionHeight - 150) {
-      document.querySelectorAll('.nav-bar ul li a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${sectionId}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-
-    // Reveal section animation
-    const sectionVisible = section.getBoundingClientRect().top < windowHeight - 100;
-    if (sectionVisible) {
-      section.classList.add('reveal');
-    }
-  });
-});
-
-  </script>
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
